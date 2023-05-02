@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace CMP1903M_OOP_AO2
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Testing.Test();
+        }
+    }
+}
