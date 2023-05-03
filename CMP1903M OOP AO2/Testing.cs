@@ -2,6 +2,8 @@
 {
     internal class Testing
     {
+        public static Pack PACK = new Pack(); //initialises the main pack of cards
+        public static Random RANDOM = new Random(); //generates a random number when required
         public static void Test()
         {
             string Choice = "";
@@ -14,7 +16,7 @@
                 if (Choice == "1")
                 { DisplayInstructions(); }
                 else if (Choice == "2")
-                { }
+                { Deal3Cards(); }
                 else if (Choice == "3")
                 { Quit(); }
                 else
@@ -56,7 +58,11 @@
 
         public static void Deal3Cards()
         {
-
+            Card Card1, Card2, Card3;
+            PACK.riffleShuffle();
+            Card1 = PACK.deal();
+            Card2 = PACK.deal();
+            Card3 = PACK.deal();
         }
     }
 }

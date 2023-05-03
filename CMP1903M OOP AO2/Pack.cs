@@ -25,23 +25,13 @@ namespace CMP1903M_OOP_AO2
                 }
             }
         }
-        //function to run whichever shuffle type was selected by the user
-        public static bool shuffleCardPack(int typeOfShuffle)
-        {
-            if (typeOfShuffle == 1)
-            { return Program.PACK.fisherShatesShuffle(); } //runs the Fisher-Yates shuffle
-            else if (typeOfShuffle == 2)
-            { return Program.PACK.riffleShuffle(); } //runs the Riffle shuffle
-            else
-            { return Program.PACK.noShuffle(); } //runs the no shuffle
-        }
 
         //function to deal a single card from the set pack
         public static Card deal()
         {
-            var packSize = Program.PACK.cards.Count - 1; //sets a pack size to reduce logic
-            Card deal_card = Program.PACK.cards[packSize]; //copies(draws) a card from the deck
-            Program.PACK.cards.RemoveAt(packSize); //removes the drawn card from the original deck
+            var packSize = Testing.PACK.cards.Count - 1; //sets a pack size to reduce logic
+            Card deal_card = Testing.PACK.cards[packSize]; //copies(draws) a card from the deck
+            Testing.PACK.cards.RemoveAt(packSize); //removes the drawn card from the original deck
             return deal_card; //returns the card
         }
 
@@ -49,12 +39,12 @@ namespace CMP1903M_OOP_AO2
         public static List<Card> dealCard(int amount)
         {
             List<Card> tempCards = new List<Card>(); //declares a list to add the drawn cards to
-            var packSize = Program.PACK.cards.Count - 1; //presets the pack size to reduce logic
+            var packSize = Testing.PACK.cards.Count - 1; //presets the pack size to reduce logic
             {
                 for (int i = 0; i < amount; i++) //loops through the set amount of cards
                 {
-                    tempCards.Add(Program.PACK.cards[packSize - i]); //copies across the drawn card to the temporary list
-                    Program.PACK.cards.RemoveAt(packSize - i); //removes the drawn card from the current deck
+                    tempCards.Add(Testing.PACK.cards[packSize - i]); //copies across the drawn card to the temporary list
+                    Testing.PACK.cards.RemoveAt(packSize - i); //removes the drawn card from the current deck
                 }
                 return tempCards; //returns the list of drawn cards
             }
@@ -80,29 +70,5 @@ namespace CMP1903M_OOP_AO2
             Console.WriteLine("Riffle Shuffle Complete");
             return true; //confirms the successful shuffle
         }
-
-        //Function that returns a false value as the cards are not shuffled
-        public bool noShuffle() //doesn't shuffle the cards
-        {
-            Console.WriteLine("No-Shuffle Shuffle Complete");
-            return false;
-        }
-
-        //Function that shuffles the deck using the Fisher-Yates method where a random card is selected and placed in a rando location in the deck
-        public bool fisherShatesShuffle()
-        {
-            var packSize = cards.Count; //presets packsize to reduce logic
-            foreach (Card card in cards.ToList()) //runs through each card in the deck
-            {
-                var index = cards.IndexOf(card); //grabs the index of the card
-                var randIndex = Program.RANDOM.Next(0, (packSize)); //grabs a random position/number in the set range
-                var tempVar = cards[randIndex]; //takes a random card from the random position our of the deck
-                cards[randIndex] = cards[index]; //places the card somewhere else in the deck
-                cards[index] = tempVar; //places the card somewehere else in the deck
-            }
-            Console.WriteLine("Fisher-Yates Shuffle Complete");
-            return true; //confirms the shuffle has completed
-        }
-
     }
 }
