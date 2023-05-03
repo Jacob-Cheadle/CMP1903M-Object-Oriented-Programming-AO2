@@ -27,7 +27,7 @@ namespace CMP1903M_OOP_AO2
         }
 
         //function to deal a single card from the set pack
-        public static Card deal()
+        public Card deal()
         {
             var packSize = Testing.PACK.cards.Count - 1; //sets a pack size to reduce logic
             Card deal_card = Testing.PACK.cards[packSize]; //copies(draws) a card from the deck
