@@ -7,7 +7,7 @@
             string Choice = "";
 
             Start();
-            while ((Choice != "1") & (Choice != "2") & (Choice != "3"))
+            while ((Choice != "2") & (Choice != "3"))
             {
                 DisplayMenu();
                 Choice = Console.ReadLine();
@@ -47,6 +47,7 @@
 
         public static void DisplayInstructions()
         {
+            Console.Clear();
             Console.WriteLine("Instructions: ");
             Console.WriteLine("-Select the 'Deal 3 Cards' Option From the Menu");
             Console.WriteLine("-A Mathematical Equation Will Be Displayed, Guess The Correct Answer");
