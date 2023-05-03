@@ -12,11 +12,11 @@
                 DisplayMenu();
                 Choice = Console.ReadLine();
                 if (Choice == "1")
-                { }
+                { DisplayInstructions(); }
                 else if (Choice == "2")
                 { }
                 else if (Choice == "3")
-                { }
+                { Quit(); }
                 else
                 {
                     Console.Clear();
@@ -53,5 +53,9 @@
             Console.WriteLine("-If Your Answer Is Correct You Will Be Told, Else You Will Be Corrected");
         }
 
+        public static void Deal3Cards()
+        {
+
+        }
     }
 }
