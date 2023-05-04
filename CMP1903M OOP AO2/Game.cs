@@ -1,11 +1,9 @@
 ﻿namespace CMP1903M_OOP_AO2
 {
-    internal class Testing
+    internal class Game
     {
-        public static Pack PACK = new Pack(); //initialises the main pack of cards
-        public static Random RANDOM = new Random(); //generates a random number when required
 
-        public static void Test()
+        public static void Play()
         {
             string Choice = "";
 
@@ -64,10 +62,10 @@
         {
             Console.Clear();
             Card Card1, Card2, Card3;
-            PACK.fisherShatesShuffle();
-            Card1 = PACK.deal();
-            Card2 = PACK.deal();
-            Card3 = PACK.deal();
+            Program.PACK.fisherShatesShuffle();
+            Card1 = Program.PACK.deal();
+            Card2 = Program.PACK.deal();
+            Card3 = Program.PACK.deal();
 
             int Val1 = Card1.Value;
             int Operator1 = Card2.Suit;
@@ -107,12 +105,12 @@
         {
             Console.Clear();
             Card Card1, Card2, Card3, Card4, Card5;
-            PACK.fisherShatesShuffle();
-            Card1 = PACK.deal();
-            Card2 = PACK.deal();
-            Card3 = PACK.deal();
-            Card4 = PACK.deal();
-            Card5 = PACK.deal();
+            Program.PACK.fisherShatesShuffle();
+            Card1 = Program.PACK.deal();
+            Card2 = Program.PACK.deal();
+            Card3 = Program.PACK.deal();
+            Card4 = Program.PACK.deal();
+            Card5 = Program.PACK.deal();
 
             int Val1 = Card1.Value;
             int Operator1 = Card2.Suit;
