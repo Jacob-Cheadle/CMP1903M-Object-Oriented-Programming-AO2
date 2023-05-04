@@ -20,6 +20,8 @@
                 { Quit(); }
                 else if (Choice == "4")
                 { Deal5Cards(); }
+                else if (Choice == "5")
+                { Tutorial.Tutor(); }
                 else
                 {
                     Console.Clear();
@@ -31,10 +33,12 @@
         public static void Start()
         {
             Console.WriteLine("Welcome to MathsTutor!");
+            Console.WriteLine();
         }
 
         public static void Quit()
         {
+            Console.Clear();
             Console.WriteLine("Thanks For Using MathsTutor!");
         }
 
@@ -45,7 +49,8 @@
             Console.WriteLine("2) Deal 3 Cards");
             Console.WriteLine("3) Quit");
             Console.WriteLine("4) Deal 5 Cards");
-
+            Console.WriteLine("5) Tutorial");
+            Console.WriteLine();
             Console.Write("Choice: ");
         }
 
@@ -56,6 +61,7 @@
             Console.WriteLine("-Select the 'Deal 3 Cards' Option From the Menu");
             Console.WriteLine("-A Mathematical Equation Will Be Displayed, Guess The Correct Answer");
             Console.WriteLine("-If Your Answer Is Correct You Will Be Told, Else You Will Be Corrected");
+            Console.WriteLine();
         }
 
         public static void Deal3Cards()
@@ -99,6 +105,7 @@
             { Console.WriteLine("Correct!"); }
             else
             { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!"); }
+            Console.WriteLine();
         }
 
         public static void Deal5Cards()
@@ -218,6 +225,7 @@
             { Console.WriteLine("Correct!"); }
             else
             { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!"); }
+            Console.WriteLine();
         }
     }
 }

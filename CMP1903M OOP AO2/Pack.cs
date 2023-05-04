@@ -19,7 +19,6 @@
                 }
             }
         }
-
         //function to deal a single card from the set pack
         public Card deal()
         {
@@ -28,7 +27,6 @@
             Program.PACK.cards.RemoveAt(packSize); //removes the drawn card from the original deck
             return deal_card; //returns the card
         }
-
         //function to deal multiple cards from the set pack up to a limit of how many cards there are in the pack
         public static List<Card> dealCard(int amount)
         {
@@ -43,7 +41,6 @@
                 return tempCards; //returns the list of drawn cards
             }
         }
-
         //function to shuffle the cards using the riffle shuffle method where the cards are split in two and then shuffled alternatively back together
         public bool fisherShatesShuffle()
         {
