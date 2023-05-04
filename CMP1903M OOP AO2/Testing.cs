@@ -63,6 +63,19 @@
             Card1 = PACK.deal();
             Card2 = PACK.deal();
             Card3 = PACK.deal();
+
+            int Val1 = Card1.Value;
+            int Operator1 = Card2.Suit;
+            int Val2 = Card3.Value;
+            int CorrectAns = Val1 + Operator1 + Val2;
+
+            Console.WriteLine(Val1 + Operator1 + Val2);
+            Console.Write("Answer: ");
+            float.TryParse(Console.ReadLine(), out float Answer);
+            if (Answer == CorrectAns)
+            {Console.WriteLine("Correct!");}
+            else
+            { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!");}
         }
     }
 }
