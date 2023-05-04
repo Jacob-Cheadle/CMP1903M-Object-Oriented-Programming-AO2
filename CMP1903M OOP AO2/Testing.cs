@@ -45,6 +45,7 @@
             Console.WriteLine("1) Instructions");
             Console.WriteLine("2) Deal 3 Cards");
             Console.WriteLine("3) Quit");
+            Console.WriteLine("4) Deal 5 Cards");
 
             Console.Write("Choice: ");
         }
@@ -115,56 +116,68 @@
             {
                 if (Operator2 == 1)
                 {
+                    Console.WriteLine($"{Val1} + {Val2} + {Val3}");
                     CorrectAns = Val1 + Val2 + Val3;
                 }
                 else if (Operator2 == 2)
                 {
+                    Console.WriteLine($"{Val1} + {Val2} - {Val3}");
                     CorrectAns = Val1 + Val2 - Val3;
                 }
                 else if (Operator2 == 3)
                 {
-                    CorrectAns = Val1 + Val2 * Val3;
+                    Console.WriteLine($"{Val1} + {Val2} * {Val3}");
+                    CorrectAns = Val1 + (Val2 * Val3);
                 }
                 else
                 {
-                    CorrectAns = Val1 + Val2 / Val3;
+                    Console.WriteLine($"{Val1} + {Val2} / {Val3}");
+                    CorrectAns = Val1 + (Val2 / Val3);
                 }
             }
             else if (Operator1 == 2)
             {
                 if (Operator2 == 1)
                 {
+                    Console.WriteLine($"{Val1} - {Val2} + {Val3}");
                     CorrectAns = Val1 - Val2 + Val3;
                 }
                 else if (Operator2 == 2)
                 {
+                    Console.WriteLine($"{Val1} - {Val2} - {Val3}");
                     CorrectAns = Val1 - Val2 - Val3;
                 }
                 else if (Operator2 == 3)
                 {
-                    CorrectAns = Val1 - Val2 * Val3;
+                    Console.WriteLine($"{Val1} - {Val2} * {Val3}");
+                    CorrectAns = Val1 - (Val2 * Val3);
                 }
                 else
                 {
-                    CorrectAns = Val1 - Val2 / Val3;
+                    Console.WriteLine($"{Val1} - {Val2} / {Val3}");
+                    CorrectAns = Val1 - (Val2 / Val3);
                 }
             }
             else if (Operator1 == 3)
             {
                 if (Operator2 == 1)
                 {
-                    CorrectAns = Val1 * Val2 + Val3;
+                    Console.WriteLine($"{Val1} * {Val2} + {Val3}");
+                    CorrectAns = (Val1 * Val2) + Val3;
                 }
                 else if (Operator2 == 2)
                 {
-                    CorrectAns = Val1 * Val2 - Val3;
+                    Console.WriteLine($"{Val1} * {Val2} - {Val3}");
+                    CorrectAns = (Val1 * Val2) - Val3;
                 }
                 else if (Operator2 == 3)
                 {
+                    Console.WriteLine($"{Val1} * {Val2} * {Val3}");
                     CorrectAns = Val1 * Val2 * Val3;
                 }
                 else
                 {
+                    Console.WriteLine($"{Val1} * {Val2} / {Val3}");
                     CorrectAns = Val1 * Val2 / Val3;
                 }
             }
@@ -172,18 +185,22 @@
             {
                 if (Operator2 == 1)
                 {
-                    CorrectAns = Val1 / Val2 + Val3;
+                    Console.WriteLine($"{Val1} / {Val2} + {Val3}");
+                    CorrectAns = (Val1 / Val2) + Val3;
                 }
                 else if (Operator2 == 2)
                 {
-                    CorrectAns = Val1 / Val2 - Val3;
+                    Console.WriteLine($"{Val1} / {Val2} - {Val3}");
+                    CorrectAns = (Val1 / Val2) - Val3;
                 }
                 else if (Operator2 == 3)
                 {
+                    Console.WriteLine($"{Val1} / {Val2} * {Val3}");
                     CorrectAns = Val1 / Val2 * Val3;
                 }
                 else
                 {
+                    Console.WriteLine($"{Val1} / {Val2} / {Val3}");
                     CorrectAns = Val1 / Val2 / Val3;
                 }
             }
