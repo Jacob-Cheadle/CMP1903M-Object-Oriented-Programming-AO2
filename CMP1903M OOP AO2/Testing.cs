@@ -58,8 +58,9 @@
 
         public static void Deal3Cards()
         {
+            Console.Clear();
             Card Card1, Card2, Card3;
-            PACK.riffleShuffle();
+            PACK.fisherShatesShuffle();
             Card1 = PACK.deal();
             Card2 = PACK.deal();
             Card3 = PACK.deal();

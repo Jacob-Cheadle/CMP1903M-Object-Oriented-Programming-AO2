@@ -51,24 +51,19 @@ namespace CMP1903M_OOP_AO2
         }
 
         //function to shuffle the cards using the riffle shuffle method where the cards are split in two and then shuffled alternatively back together
-        public bool riffleShuffle()
+        public bool fisherShatesShuffle()
         {
             var packSize = cards.Count; //presets packsize to reduce logic
-            if (packSize % 2 != 0 && packSize <= 2) //ensures that the cards can be riffle shuffled equally
+            foreach (Card card in cards.ToList()) //runs through each card in the deck
             {
-                return false; //returns false if the cards cannot be shuffled
+                var index = cards.IndexOf(card); //grabs the index of the card
+                var randIndex = Testing.RANDOM.Next(0, (packSize)); //grabs a random position/number in the set range
+                var tempVar = cards[randIndex]; //takes a random card from the random position our of the deck
+                cards[randIndex] = cards[index]; //places the card somewhere else in the deck
+                cards[index] = tempVar; //places the card somewehere else in the deck
             }
-            var leftPack = cards.GetRange(0, (packSize / 2));
-            var rightPack = cards.GetRange((packSize / 2), packSize / 2); //splits the cards into two seperate decks
-            var newPack = new List<Card>();
-            for (var i = 0; i < (packSize / 2); i++) //alternates through each deck adding one card from each to the new deck
-            {
-                newPack.Add(leftPack[i]);
-                newPack.Add(rightPack[i]);
-            }
-            cards = newPack; //sets the main deck as the new shuffled deck
-            Console.WriteLine("Riffle Shuffle Complete");
-            return true; //confirms the successful shuffle
+            Console.WriteLine("Fisher-Yates Shuffle Complete");
+            return true; //confirms the shuffle has completed
         }
     }
 }
