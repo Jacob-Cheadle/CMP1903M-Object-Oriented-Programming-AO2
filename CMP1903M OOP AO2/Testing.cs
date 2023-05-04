@@ -9,7 +9,7 @@
             string Choice = "";
 
             Start();
-            while ((Choice != "2") & (Choice != "3"))
+            while (Choice != "3")
             {
                 DisplayMenu();
                 Choice = Console.ReadLine();
@@ -67,9 +67,21 @@
             int Val1 = Card1.Value;
             int Operator1 = Card2.Suit;
             int Val2 = Card3.Value;
-            int CorrectAns = Val1 + Operator1 + Val2;
+            int CorrectAns;
 
-            Console.WriteLine(Val1 + Operator1 + Val2);
+            if (Operator1 == 1) 
+            { Console.WriteLine($"{Val1} + {Val2}");
+                CorrectAns = Val1 + Val2;}
+            else if (Operator1 == 2)
+            {Console.WriteLine($"{Val1} - {Val2}");
+                CorrectAns = Val1 - Val2;}
+            else if (Operator1 == 3)
+            {Console.WriteLine($"{Val1} * {Val2}");
+                CorrectAns = Val1 * Val2;}
+            else
+            {Console.WriteLine($"{Val1} / {Val2}");
+                CorrectAns = Val1 / Val2;}
+
             Console.Write("Answer: ");
             float.TryParse(Console.ReadLine(), out float Answer);
             if (Answer == CorrectAns)
