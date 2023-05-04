@@ -113,23 +113,79 @@
 
             if (Operator1 == 1)
             {
-                Console.WriteLine($"{Val1} + {Val2}");
-                CorrectAns = Val1 + Val2;
+                if (Operator2 == 1)
+                {
+                    CorrectAns = Val1 + Val2 + Val3;
+                }
+                else if (Operator2 == 2)
+                {
+                    CorrectAns = Val1 + Val2 - Val3;
+                }
+                else if (Operator2 == 3)
+                {
+                    CorrectAns = Val1 + Val2 * Val3;
+                }
+                else
+                {
+                    CorrectAns = Val1 + Val2 / Val3;
+                }
             }
             else if (Operator1 == 2)
             {
-                Console.WriteLine($"{Val1} - {Val2}");
-                CorrectAns = Val1 - Val2;
+                if (Operator2 == 1)
+                {
+                    CorrectAns = Val1 - Val2 + Val3;
+                }
+                else if (Operator2 == 2)
+                {
+                    CorrectAns = Val1 - Val2 - Val3;
+                }
+                else if (Operator2 == 3)
+                {
+                    CorrectAns = Val1 - Val2 * Val3;
+                }
+                else
+                {
+                    CorrectAns = Val1 - Val2 / Val3;
+                }
             }
             else if (Operator1 == 3)
             {
-                Console.WriteLine($"{Val1} * {Val2}");
-                CorrectAns = Val1 * Val2;
+                if (Operator2 == 1)
+                {
+                    CorrectAns = Val1 * Val2 + Val3;
+                }
+                else if (Operator2 == 2)
+                {
+                    CorrectAns = Val1 * Val2 - Val3;
+                }
+                else if (Operator2 == 3)
+                {
+                    CorrectAns = Val1 * Val2 * Val3;
+                }
+                else
+                {
+                    CorrectAns = Val1 * Val2 / Val3;
+                }
             }
             else
             {
-                Console.WriteLine($"{Val1} / {Val2}");
-                CorrectAns = Val1 / Val2;
+                if (Operator2 == 1)
+                {
+                    CorrectAns = Val1 / Val2 + Val3;
+                }
+                else if (Operator2 == 2)
+                {
+                    CorrectAns = Val1 / Val2 - Val3;
+                }
+                else if (Operator2 == 3)
+                {
+                    CorrectAns = Val1 / Val2 * Val3;
+                }
+                else
+                {
+                    CorrectAns = Val1 / Val2 / Val3;
+                }
             }
 
             Console.Write("Answer: ");
