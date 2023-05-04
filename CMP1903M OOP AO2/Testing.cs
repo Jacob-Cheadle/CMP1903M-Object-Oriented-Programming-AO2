@@ -19,6 +19,8 @@
                 { Deal3Cards(); }
                 else if (Choice == "3")
                 { Quit(); }
+                else if (Choice == "4")
+                { Deal5Cards(); }
                 else
                 {
                     Console.Clear();
@@ -89,6 +91,53 @@
             {Console.WriteLine("Correct!");}
             else
             { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!");}
+        }
+
+        public static void Deal5Cards()
+        {
+            Console.Clear();
+            Card Card1, Card2, Card3, Card4, Card5;
+            PACK.fisherShatesShuffle();
+            Card1 = PACK.deal();
+            Card2 = PACK.deal();
+            Card3 = PACK.deal();
+            Card4 = PACK.deal();
+            Card5 = PACK.deal();
+
+            int Val1 = Card1.Value;
+            int Operator1 = Card2.Suit;
+            int Val2 = Card3.Value;
+            int Operator2 = Card4.Suit;
+            int Val3 = Card5.Value;
+            int CorrectAns;
+
+            if (Operator1 == 1)
+            {
+                Console.WriteLine($"{Val1} + {Val2}");
+                CorrectAns = Val1 + Val2;
+            }
+            else if (Operator1 == 2)
+            {
+                Console.WriteLine($"{Val1} - {Val2}");
+                CorrectAns = Val1 - Val2;
+            }
+            else if (Operator1 == 3)
+            {
+                Console.WriteLine($"{Val1} * {Val2}");
+                CorrectAns = Val1 * Val2;
+            }
+            else
+            {
+                Console.WriteLine($"{Val1} / {Val2}");
+                CorrectAns = Val1 / Val2;
+            }
+
+            Console.Write("Answer: ");
+            float.TryParse(Console.ReadLine(), out float Answer);
+            if (Answer == CorrectAns)
+            { Console.WriteLine("Correct!"); }
+            else
+            { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!"); }
         }
     }
 }
