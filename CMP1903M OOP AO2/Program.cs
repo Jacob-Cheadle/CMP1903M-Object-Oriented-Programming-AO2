@@ -2,7 +2,7 @@
 {
     class Program
     {
-        public static void Main()
+        private static void Main()
         {
             Testing.Test();
         }

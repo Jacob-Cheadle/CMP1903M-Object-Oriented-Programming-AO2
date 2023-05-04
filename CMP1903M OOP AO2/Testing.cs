@@ -74,25 +74,33 @@
             int Val2 = Card3.Value;
             int CorrectAns;
 
-            if (Operator1 == 1) 
-            { Console.WriteLine($"{Val1} + {Val2}");
-                CorrectAns = Val1 + Val2;}
+            if (Operator1 == 1)
+            {
+                Console.WriteLine($"{Val1} + {Val2}");
+                CorrectAns = Val1 + Val2;
+            }
             else if (Operator1 == 2)
-            {Console.WriteLine($"{Val1} - {Val2}");
-                CorrectAns = Val1 - Val2;}
+            {
+                Console.WriteLine($"{Val1} - {Val2}");
+                CorrectAns = Val1 - Val2;
+            }
             else if (Operator1 == 3)
-            {Console.WriteLine($"{Val1} * {Val2}");
-                CorrectAns = Val1 * Val2;}
+            {
+                Console.WriteLine($"{Val1} * {Val2}");
+                CorrectAns = Val1 * Val2;
+            }
             else
-            {Console.WriteLine($"{Val1} / {Val2}");
-                CorrectAns = Val1 / Val2;}
+            {
+                Console.WriteLine($"{Val1} / {Val2}");
+                CorrectAns = Val1 / Val2;
+            }
 
             Console.Write("Answer: ");
             float.TryParse(Console.ReadLine(), out float Answer);
             if (Answer == CorrectAns)
-            {Console.WriteLine("Correct!");}
+            { Console.WriteLine("Correct!"); }
             else
-            { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!");}
+            { Console.WriteLine("Incorrect - The Correct Answer is " + CorrectAns + "!"); }
         }
 
         public static void Deal5Cards()

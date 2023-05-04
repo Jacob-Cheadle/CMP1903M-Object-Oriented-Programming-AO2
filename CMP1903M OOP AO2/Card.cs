@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903M_OOP_AO2
+﻿namespace CMP1903M_OOP_AO2
 {
     class Card
     {
