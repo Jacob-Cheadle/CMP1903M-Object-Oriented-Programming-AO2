@@ -4,6 +4,7 @@
     {
         public static void Tutor()
         {
+            Console.Clear();
             Console.WriteLine("Welcome to the MathsTutor Tutorial!");
             Thread.Sleep(700);
             Console.WriteLine("To use the program you must select a Deal option.");
